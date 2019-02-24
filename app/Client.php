@@ -14,4 +14,12 @@ class Client extends Model
     protected $fillable = [
         'dni', 'nom',
     ];
+    /**
+     * Els clients que te una empresa
+     */
+    public function empreses()
+    {
+        return $this->belongsToMany('App\Empresa');
+    }
+
 }

@@ -36,4 +36,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Torna totes les empreses d'un usuari
+     */
+    public function empreses()
+    {
+        return $this->hasMany('App\Empresa');
+    }
 }
